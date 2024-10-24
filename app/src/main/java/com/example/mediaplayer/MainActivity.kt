@@ -26,13 +26,7 @@ class MainActivity : AppCompatActivity() {
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.nextButton.setOnClickListener {
-            currentIndex+=1
-        }
 
-        binding.previousButton.setOnClickListener {
-            currentIndex-=1
-        }
 
         playSound(songList[currentIndex])
 
@@ -51,6 +45,14 @@ class MainActivity : AppCompatActivity() {
         }
         binding.stopButton.setOnClickListener {
             stopMusic()
+        }
+
+        binding.nextButton.setOnClickListener {
+
+        }
+
+        binding.previousButton.setOnClickListener {
+
         }
 
         binding.seekbar.setOnSeekBarChangeListener( object: SeekBar.OnSeekBarChangeListener {
